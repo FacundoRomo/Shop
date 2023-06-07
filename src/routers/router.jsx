@@ -4,12 +4,13 @@ import { Product } from "../component/Product/Product"
 
 export  const router = createBrowserRouter([
     {
-        path:"/",
+        path:"/Shop",
         element: <App />,
+        errorElement:<h1>nose</h1>
     },
     {
-        path:"product/:productId",
-        element: <Product />
+        path:"/Shop/product/:productId",
+        element: <Product /> 
 
     }
 ])
