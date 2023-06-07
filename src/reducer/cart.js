@@ -41,11 +41,11 @@ export const cartReducer = (state, action) => {
         const newState = state.filter(item => item.id != id)
         updateLocalStorage(newState)
         return newState
-      }
+      } 
 
       case CART_ACTION_TYPES.CLEAR_CART:{
-        updateLocalStorage(cartInitialState)
-        return cartInitialState
+        window.localStorage.clear()
+        return []
       }
 
     }
